@@ -1,4 +1,4 @@
-// presentation/blocs/product/product_state.dart
+
 import '../../../data/models/product_model.dart';
 
 abstract class ProductState {}

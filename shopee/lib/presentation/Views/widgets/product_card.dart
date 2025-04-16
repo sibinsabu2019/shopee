@@ -20,7 +20,7 @@ class ProductCard extends StatelessWidget {
     return GestureDetector(
       onTap: () => Navigator.pushNamed(context, '/productDetail',arguments: product),
       child: AspectRatio(
-        aspectRatio: 2 / 3, // Ensures consistency across all devices
+        aspectRatio: 2 / 3, 
         child: Container(
           decoration: BoxDecoration(
             color: Colors.white,
@@ -74,7 +74,7 @@ class ProductCard extends StatelessWidget {
                       const SizedBox(height: 4),
                       Row(
                         children: [
-// Inside your widget
+
                           RatingBarIndicator(
                             rating: product.rating, // example: 3.5
                             itemBuilder: (context, index) => const Icon(
@@ -99,7 +99,7 @@ class ProductCard extends StatelessWidget {
                           ),
                           const SizedBox(width: 8),
 
-                          // Original Price (Strikethrough)
+                        
                           Text(
                             '\$${(product.price / (1 - product.discountPercentage / 100)).toStringAsFixed(2)}',
                             style: const TextStyle(
@@ -111,7 +111,7 @@ class ProductCard extends StatelessWidget {
 
                           const Spacer(),
 
-                          // Discount %
+                  
                           Text(
                             '-${product.discountPercentage.toStringAsFixed(2)}%',
                             style: const TextStyle(

@@ -22,7 +22,7 @@ class LoginScreen extends StatelessWidget {
       child: Scaffold(
         body: Container(
           decoration: const BoxDecoration(
-            color: Color(0xFF4CAF50), // Green background
+            color: Color(0xFF4CAF50),
           ),
           child: Center(
             child: Padding(
@@ -56,7 +56,7 @@ class LoginScreen extends StatelessWidget {
                                 style: TextStyle(
                                   fontSize: 24,
                                   fontWeight: FontWeight.bold,
-                                  color: Color(0xFF2E7D32), // Dark green
+                                  color: Color(0xFF2E7D32), 
                                 ),
                               ),
                               const SizedBox(height: 24),

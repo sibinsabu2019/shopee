@@ -1,4 +1,4 @@
-// data/models/product_model.dart
+
 class Product {
   final int id;
   final String title;
@@ -11,7 +11,7 @@ class Product {
   final String thumbnail;
   final String category;
 
-  // 🔥 New fields
+
   final String returnPolicy;
   final String warrantyInformation;
   final String shippingInformation;
@@ -29,7 +29,7 @@ class Product {
     required this.thumbnail,
     required this.category,
 
-    // New required parameters
+
     required this.returnPolicy,
     required this.warrantyInformation,
     required this.shippingInformation,
@@ -49,7 +49,7 @@ class Product {
         thumbnail: json['thumbnail'] ?? '',
         category: json['category'] ?? '',
 
-        // New fields
+
         returnPolicy: json['returnPolicy'] ?? 'No return policy',
         warrantyInformation: json['warrantyInformation'] ?? 'No warranty info',
         shippingInformation: json['shippingInformation'] ?? 'No shipping info',

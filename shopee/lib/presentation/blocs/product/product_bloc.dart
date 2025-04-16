@@ -1,4 +1,4 @@
-// presentation/blocs/product/product_bloc.dart
+
 import 'dart:developer';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,7 +16,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
       emit(ProductLoading());
       try {
         final products = await apiService.fetchProducts();
-        // log(products.toString());
+       
          _allProducts = products; 
         emit(ProductLoaded(products));
       }catch (error, stackTrace) {

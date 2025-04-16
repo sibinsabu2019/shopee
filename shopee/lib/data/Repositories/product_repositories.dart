@@ -1,17 +1,4 @@
-// // data/data_sources/product_api_service.dart
-// import 'package:dio/dio.dart';
-// import '../models/product_model.dart';
 
-// class ProductApiService {
-//   final Dio _dio = Dio();
-
-//   Future<List<Product>> fetchProducts() async {
-//     final response = await _dio.get('https://dummyjson.com/products');
-//     final data = response.data['products'] as List;
-//     // log(data.toString());
-//     return data.map((json) => Product.fromJson(json)).toList();
-//   }
-// }
 import 'package:shopee/core/Api/dio_client.dart';
 
 

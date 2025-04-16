@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   borderRadius: BorderRadius.circular(8),
                                 ),
                                 side: BorderSide(
-                                  color: Colors.white, // Border color
+                                  color: Colors.white,
                                   width: 0.5,
                                 ),
                               ),
@@ -115,86 +115,75 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         body: BlocBuilder<ProductBloc, ProductState>(
           builder: (context, state) {
-    if (state is ProductLoading) {
-  return Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: GridView.builder(
-      itemCount: 6,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        mainAxisSpacing: 10,
-        crossAxisSpacing: 10,
-        childAspectRatio: 0.6,
-      ),
-      itemBuilder: (context, index) {
-        final delay = index * 300;
+            if (state is ProductLoading) {
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GridView.builder(
+                  itemCount: 6,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10,
+                    childAspectRatio: 0.6,
+                  ),
+                  itemBuilder: (context, index) {
+                    final delay = index * 300;
 
-        return Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(12),
-          ),
-          padding: const EdgeInsets.all(8),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // Image Placeholder
-              FadeShimmer(
-                height: 130,
-                width: double.infinity,
-                radius: 10,
-                millisecondsDelay: delay,
-                fadeTheme: FadeTheme.light,
-              ),
-              const SizedBox(height: 10),
-
-              // Title
-              FadeShimmer(
-                height: 12,
-                width: double.infinity,
-                radius: 6,
-                millisecondsDelay: delay + 100,
-                fadeTheme: FadeTheme.light,
-              ),
-              const SizedBox(height: 6),
-
-              // Subtitle
-              FadeShimmer(
-                height: 12,
-                width: 80,
-                radius: 6,
-                millisecondsDelay: delay + 150,
-                fadeTheme: FadeTheme.light,
-              ),
-              const Spacer(),
-
-              // Price
-              FadeShimmer(
-                height: 14,
-                width: 60,
-                radius: 6,
-                millisecondsDelay: delay + 200,
-                fadeTheme: FadeTheme.light,
-              ),
-              const SizedBox(height: 8),
-
-              // Button
-              FadeShimmer(
-                height: 36,
-                width: double.infinity,
-                radius: 8,
-                millisecondsDelay: delay + 250,
-                fadeTheme: FadeTheme.light,
-              ),
-            ],
-          ),
-        );
-      },
-    ),
-  );
-}
-
- 
+                    return Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      padding: const EdgeInsets.all(8),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          FadeShimmer(
+                            height: 130,
+                            width: double.infinity,
+                            radius: 10,
+                            millisecondsDelay: delay,
+                            fadeTheme: FadeTheme.light,
+                          ),
+                          const SizedBox(height: 10),
+                          FadeShimmer(
+                            height: 12,
+                            width: double.infinity,
+                            radius: 6,
+                            millisecondsDelay: delay + 100,
+                            fadeTheme: FadeTheme.light,
+                          ),
+                          const SizedBox(height: 6),
+                          FadeShimmer(
+                            height: 12,
+                            width: 80,
+                            radius: 6,
+                            millisecondsDelay: delay + 150,
+                            fadeTheme: FadeTheme.light,
+                          ),
+                          const Spacer(),
+                          FadeShimmer(
+                            height: 14,
+                            width: 60,
+                            radius: 6,
+                            millisecondsDelay: delay + 200,
+                            fadeTheme: FadeTheme.light,
+                          ),
+                          const SizedBox(height: 8),
+                          FadeShimmer(
+                            height: 36,
+                            width: double.infinity,
+                            radius: 8,
+                            millisecondsDelay: delay + 250,
+                            fadeTheme: FadeTheme.light,
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              );
+            }
             else if (state is ProductLoaded) {
               return Padding(
                 padding: const EdgeInsets.all(8.0),

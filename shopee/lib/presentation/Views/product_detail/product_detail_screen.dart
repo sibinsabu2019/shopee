@@ -25,7 +25,7 @@ class ProductDetailScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Product Image
+         
             Center(
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(15),
@@ -42,7 +42,7 @@ class ProductDetailScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
 
-            // Title and Warranty
+ 
             Row(
               children: [
                 Expanded(
@@ -72,7 +72,6 @@ class ProductDetailScreen extends StatelessWidget {
 
             const SizedBox(height: 10),
 
-            // Description
             Text(
               product.description,
               textAlign: TextAlign.justify,
@@ -80,7 +79,7 @@ class ProductDetailScreen extends StatelessWidget {
             ),
             const SizedBox(height: 10),
 
-            // Rating
+          
             Row(
               children: [
                 RatingBarIndicator(
@@ -102,7 +101,6 @@ class ProductDetailScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
 
-            // Hot Deal Badge
             if (product.discountPercentage >= 15.0)
               Container(
                 padding:
@@ -130,7 +128,6 @@ class ProductDetailScreen extends StatelessWidget {
               ),
             const SizedBox(height: 7),
 
-            // Price and Discount
             Row(
               children: [
                 Text(
@@ -161,7 +158,6 @@ class ProductDetailScreen extends StatelessWidget {
             ),
             const SizedBox(height: 6),
 
-            // Shipping Info
             Row(
               children: [
                 const Icon(Icons.local_shipping),
@@ -171,7 +167,6 @@ class ProductDetailScreen extends StatelessWidget {
             ),
             const Divider(),
 
-            // Stock & Availability
             Row(
               children: [
                 Text(
@@ -186,7 +181,6 @@ class ProductDetailScreen extends StatelessWidget {
             ),
             const SizedBox(height: 10),
 
-            // Brand
             Row(
               children: [
                 const Text(". Brand :"),
@@ -198,14 +192,12 @@ class ProductDetailScreen extends StatelessWidget {
             ),
             const SizedBox(height: 10),
 
-            // Category
             Text(
               ". Category: ${product.category.toUpperCase()}",
               style: const TextStyle(color: Colors.black),
             ),
             const Divider(),
 
-            // Features Row
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -230,7 +222,6 @@ class ProductDetailScreen extends StatelessWidget {
         ),
       ),
 
-      // Bottom Fixed Buttons
       bottomNavigationBar: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         decoration: BoxDecoration(
@@ -248,7 +239,7 @@ class ProductDetailScreen extends StatelessWidget {
             Expanded(
               child: ElevatedButton(
                 onPressed: () {
-                  // Add to cart logic
+
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.orange,
@@ -271,7 +262,7 @@ class ProductDetailScreen extends StatelessWidget {
             Expanded(
               child: ElevatedButton(
                 onPressed: () {
-                  // Buy now logic
+         
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green,
